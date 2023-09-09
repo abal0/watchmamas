@@ -1,0 +1,404 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Spartan' , sans-serif;
+}
+
+h1{
+    font-size: 50px;
+    line-height: 64px;
+    color: #222;
+}
+h2{
+    font-size: 46px;
+    line-height: 54px;
+    color: #222;
+}
+
+h4{
+    font-size: 20px;
+    color: #222;
+}
+
+h6{
+    font-weight: 700;
+    font-size: 12px;
+}
+p{
+    font-size: 16px;
+    color: #465b52;
+    margin:  15px 0 20px 0;
+}
+.section-p1{
+    padding: 60px 60px;
+
+}
+.section-m1{
+    margin: 40px 0;
+}
+
+#logos{
+    
+    height: 40px ;
+    width: 150px ;
+}
+
+/* Header start */
+#header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+    background-color: #E3E6F3;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    position: sticky;
+    top: 0px;
+    left: 0;
+    z-index: 999;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#navbar li{
+    /* text-decoration: none; */ /* Wrong */
+    list-style: none;
+    padding: 0 20px;
+    position: relative;
+}
+
+#navbar li a{ /*  right */
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+
+#navbar li a:hover ,
+#navbar li a.active{
+    color: #f14a07;
+
+}
+
+#navbar li a.active::after ,
+#navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #f14a07;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+}
+
+/* home page  */
+#hero{
+    background-image: url(allimg/hero4.png) ;
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding: 0 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#hero h4{
+    padding: 0 0 15px 0  ;
+}
+
+#hero h1{
+    padding: 0 0 15px 0  ;
+    color: #f14a07;
+}
+
+#hero button{
+    background-color: rgba(230, 48, 3, 0.87);
+    color: white;
+    font-size: 20px ;
+    border: 1px solid #f14a07;
+    padding: 5px;
+    transition: 0.8s ease;
+    border-radius: 10px 0px 10px 0px;
+}
+#hero button:hover{
+    background-color: transparent;
+    color: #f14a07;
+   
+    border-radius: 0 10px 0 10px ;
+}
+
+#Product1{
+    text-align: center;
+}
+
+#Product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border: 1px solid #cce7d0;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    margin: 15px 0;
+    position: relative;
+    
+}
+#Product1 .pro:hover{
+    box-shadow: 0px 0px  15px 2px rgba(6, 99, 122, 0.3) ;
+    scale: 11px;
+}
+
+
+#Product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+}
+
+
+#Product1 .pro .des{
+    text-align: start;
+    padding: 10px 0 ;
+}
+
+#Product1 .pro .des span{
+   color: #606063;
+   font-size: 12px;
+}
+
+#Product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+
+#Product1 .pro .des h4{
+    padding-top: 7px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #f86402;
+}
+
+#Product1 .pro #cart{
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    border-radius: 50px;
+    background-color: transparent;
+    border: 1px solid #f86402;
+    color: #f86402;
+    position: absolute;
+    bottom: 20px;
+    right: 10px;
+   
+}
+#Product1 .pro #cart:hover{
+    color: white;
+    background-color: #f86402;
+    border: 1px solid #f86402;
+    border-radius: 50px;
+    box-shadow: 0 0 10px 5px rgba(6, 216, 223, 0.281);
+
+}
+#Product1 .pro-container{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+#mobile{
+    display: none;
+}
+
+#close{
+    display: none;
+}
+
+/* start media query  */
+
+@media only screen and (max-width:788px) {
+
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0px;
+        right: -300px;
+        height: 0px;
+        height: 100vh;
+        width: 300px;
+        background-color: #E3E6F3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1); 
+        padding: 80px 0px 0px 10px;
+        transition: 0.3s;
+    }
+    #navbar.active{
+        right: 0;
+    }
+    #navbar li{
+        margin-bottom: 10px;
+    }
+
+    #mobile{
+        display: flex;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+    #close{
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+        display: block;
+    }
+    #close:hover{
+        transform: rotate(45deg);
+        transition: 1s ease;
+        color: #088178;
+    }
+
+    #hero{
+      height: 70vh;
+      padding: 0 80px;
+      background-position: top 20% right 45%;
+    }
+
+    #product1 .pro-container{
+        justify-content: center;
+
+    }
+    
+    #product1 .pro{
+        margin: 15px;
+
+    }
+}
+
+@media (max-width:477px) {
+    #header{
+        padding: 10px 10px;
+    }
+
+    #hero{
+        padding: 0 20px;
+        background-position: 55%;
+    }
+
+    h1{
+        font-size: 38px ;
+    }
+
+    #product1 .pro{
+        width: 100%;
+    
+    }
+
+    .fh{
+        font-size: 30px;
+    }
+}
+
+
+/* shop page  */
+
+.st h2{
+    text-align: center;
+    padding: 20px 0 0 0 ;
+}
+.fh{
+    padding: 0 80px;
+    text-align: center;
+    width: 100%;
+    height: 80px;
+    background-color: #d2eaf0;
+    color: #f14a07;
+ 
+}
+
+.all-up{
+    margin-top: 40px;
+   
+}
+
+.post1{
+    padding: 20px 0 40px 0;
+}
+
+iframe{
+    border: 3px;
+    color: #f14a07;
+}
+
+
+footer{
+    background-color: #E3E6F3;
+    border-radius: 30px 30px 0 0;
+
+}
+
+.footerContainr{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+
+.socialIcons{
+    justify-content: center;
+    font-size: 30px;
+    display: flex;
+    
+}
+.socialIcons a{
+    text-decoration: none;
+    padding: 0px 10px;
+    color: #f14a07;
+    text-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
+    margin: 0 10px;
+    transition: 0.4s ease;
+}
+
+.socialIcons a:hover{
+    color: #007ea5;
+}
+
+.footernav ul li{
+    display: flex;
+    justify-content: center;
+    list-style: none;
+
+}
+.footernav ul li a{
+    color: #f14a07;
+    padding: 5px 10px;
+    font-size: 17px;
+    text-decoration: none;
+    
+    
+}
+
+.footerBottom{
+    text-align: center;
+}
+
+
+/* .footernav ul li a{
+    
+}
+ */
+
